@@ -1,4 +1,4 @@
-(ns build.core
+(ns closure-library-build.core
   (:use
     [leiningen.compile :only [eval-in-project]])) 
 

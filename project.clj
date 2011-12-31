@@ -11,7 +11,7 @@
 (use '[leiningen.core :only [prepend-tasks]]
      '[leiningen.pom :only [pom]]
      '[leiningen.jar :only [jar]]
-     '[build.core :only [copy-resources]])
+     '[closure-library-build.core :only [copy-resources]])
 
 (prepend-tasks #'pom copy-resources)
 (prepend-tasks #'jar copy-resources)
