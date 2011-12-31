@@ -8,7 +8,12 @@ releases that can be found at:
 
 ## License
 
+Source Copyright © Evan Mezeske, 2011 (for non-upstream source).
+Released under the Eclipse Public License - v 1.0.
+See the file COPYING.
+
 The upstream code is released under the Apache License 2.0,
 and can be found at:
 
 	http://code.google.com/p/closure-library/
+

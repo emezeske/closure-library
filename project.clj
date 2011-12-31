@@ -1,6 +1,9 @@
 (defproject emezeske/closure-library "r1376"
   :description "Google Closure Library"
   :url "http://github.com/emezeske/closure-library"
+  :license {:name "Eclipse Public License - v 1.0"
+            :url "http://www.eclipse.org/legal/epl-v10.html"
+            :distribution :repo}
   :dev-dependencies [[fs "0.11.1"]]
   :jar-exclusions [#"closure" #"bin" #"css" #"known_issues"]  
   :resources-path "resources")
