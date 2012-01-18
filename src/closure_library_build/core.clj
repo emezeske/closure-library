@@ -4,9 +4,16 @@
 
 (defn copy-resources [project]
   (eval-in-project project
-    `(let [~'dest ~(:resources-path project)]
-      (fs/copy-tree "upstream/closure" ~'dest)
-      (fs/copy-tree "upstream/third_party/closure/goog" ~'(fs/join dest "third_party/goog")))
+    `(let [dest# ~(:resources-path project)]
+      (when (fs/exists? dest#)
+	(fs/deltree dest#) 
+        (fs/mkdir dest#))
+      (fs/copy-tree "upstream/third_party/closure/goog" dest#)
+      (fs/copy-tree "upstream/closure/goog" dest#)
+      (let [deps# (slurp (fs/join dest# "goog/deps.js"))
+            rep# (.replaceAll deps# "\\.\\./\\.\\./third_party/closure/goog/" "")]
+        (spit (fs/join dest# "goog/deps.orig") deps#)
+	(spit (fs/join dest# "goog/deps.js") rep#)))
       nil 
       nil 
       '(require 'fs)))
