@@ -1,4 +1,4 @@
-(defproject emezeske/closure-library "r1376"
+(defproject emezeske/closure-library "0.0.1+r1376"
   :description "Google Closure Library"
   :url "http://github.com/emezeske/closure-library"
   :license {:name "Eclipse Public License - v 1.0"
