@@ -1,3 +1,5 @@
+# NOTICE: DO NOT USE THIS REPOSITORY, OR THE JARS BUILT FROM IT.  THE UPSTREAM MAINTAINERS NOW PROVIDE AN OFFICIAL JAR.  THIS PROJECT IS DEPRECATED.
+
 # closure-library
 
 This is just the Google Closure Library packaged as a jar.
